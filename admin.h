@@ -50,7 +50,7 @@ void add_car()
     cin>>model;
 
     ofstream out("data/cars", ios::app);
-    out<<brand<<'\t'<<model<<'\t'<<"1"<<endl;
+    out<<brand<<'\t'<<model<<'\t'<<"1"<<'\t'<<"0"<<endl;
     out.close();
 }
 
@@ -108,6 +108,7 @@ void available()
             cout<<brand<<' '<<model<<endl;
             count++;
         }
+        in>>data;
     }
     if(count==0)
     {
