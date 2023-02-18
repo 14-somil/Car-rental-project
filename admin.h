@@ -7,7 +7,11 @@ int main();
 void admin()
 {
     system("cls");
-    cout<<"\nType:\n1: to add a new car\n2: to search a car\n3: to view available car\n4: to unbook a booked car\n5: to exit\n\n";
+    cout<<"Type:\n1: to add a new car\n"
+    "2: to search a car\n"
+    "3: to view available car\n"
+    "4: to unbook a booked car\n"
+    "5: to exit\n\n";
     int choice;
     cin>>choice;
     switch(choice)
