@@ -94,6 +94,7 @@ void customer_login()
             }
         }
         in.close();
+        user=username;
     }
     else
     {

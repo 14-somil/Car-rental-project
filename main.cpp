@@ -7,12 +7,13 @@ bool is_admin=false;
 #include <fstream>
 #include <iomanip>
 
-std::string username;
+std::string user;
 
 using namespace std;
 
 #include "login.h"
 #include "admin.h"
+#include "customer.h"
 
 int main()
 {
