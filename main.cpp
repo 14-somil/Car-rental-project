@@ -6,6 +6,7 @@ bool is_admin=false;
 #include <cstring>
 #include <fstream>
 #include <iomanip>
+#include <cstdio>
 #include <cstdlib>
 
 std::string user;

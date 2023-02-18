@@ -19,9 +19,47 @@ void customer()
     if(count==0)
     {
         system("cls");
-        cout<<"Sorry, no cars available";
-        
+        cout<<"Sorry, no cars available\n";
+        cout<<"Enter anything to continue\n";
+        string temp;
+        cin>>temp;
+        in.close();
         main();
     }
-    
+    else
+    {
+        int option;
+        cin>>option;
+        ifstream copy("data/cars");
+        ofstream out("data/temp");
+        int counter=0;
+        string data;
+        while(copy>>data)
+        {
+            counter++;
+            out<<data<<'\t';
+            copy>>data;
+            out<<data<<'\t';
+            if(counter==option)
+            {
+                out<<"0"<<'\t';
+                out<<user;
+                copy>>data;
+                copy>>data;
+            }
+            else
+            {
+                copy>>data;
+                out<<data<<'\t';
+                copy>>data;
+                out<<data;
+            }
+            out<<endl;
+        }
+        copy.close();
+        out.close();
+        in.close();
+        remove("data/cars");
+        rename("data/temp","data/cars");
+    }
 }
