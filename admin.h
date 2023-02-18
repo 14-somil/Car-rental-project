@@ -96,6 +96,10 @@ void search_car()
         cout<<"Car doesn\'t exist\n";
     }
     in.close();
+    cout<<"Type anything to continue\n";
+    string temp;
+    cin>>temp;
+
 }
 
 void available()
@@ -116,9 +120,15 @@ void available()
             count++;
         }
         in>>data;
-    }
+    } 
+    cout<<"Type anything to continue\n";
+    string temp;
+    cin>>temp;
     if(count==0)
     {
         cout<<"No car Available\n";
+        cout<<"Type anything to continue\n";
+        string temp;
+        cin>>temp;
     }
 }
