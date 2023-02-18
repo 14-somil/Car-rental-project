@@ -4,6 +4,7 @@ void available();
 
 void admin()
 {
+    system("cls");
     cout<<"\nType:\n1: to add a new car\n2: to search a car\n3: to view available car\n\n";
     int choice;
     cin>>choice;
@@ -32,6 +33,7 @@ void admin()
 
         default:
         {
+            system("cls");
             cout<<"Invalid input\n";
             admin();
             break;
@@ -41,6 +43,7 @@ void admin()
 
 void add_car()
 {
+    system("cls");
     cout<<"Type brand of car\n";
     string brand;
     cin>>brand;
@@ -56,6 +59,7 @@ void add_car()
 
 void search_car()
 {
+    system("cls");
     ifstream in("data/cars");
     bool check=false;
     cout<<"Type brand of car\n";
@@ -96,6 +100,7 @@ void search_car()
 
 void available()
 {
+    system("cls");
     ifstream in("data/cars");
     cout<<"Available Cars are:\n\n";
     string brand, model;

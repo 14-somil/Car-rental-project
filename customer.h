@@ -1,5 +1,6 @@
 void customer()
 {
+    system("cls");
     ifstream in("data/cars");
     int count=0;
     string brand;
@@ -17,8 +18,10 @@ void customer()
     }
     if(count==0)
     {
-        cout<<"\b\b\b\b\b\b";
+        system("cls");
         cout<<"Sorry, no cars available";
+        
+        main();
     }
     
 }

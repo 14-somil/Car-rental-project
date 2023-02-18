@@ -5,7 +5,7 @@ void admin_login();
 
 void asklogin()
 {
-    cout<<"\nEnter\n1: to login as agent\n2: to login as customer\n3: to register as new customer\n\n";
+    cout<<"Enter\n1: to login as agent\n2: to login as customer\n3: to register as new customer\n\n";
     int choice=0;
     cin>>choice;
     switch(choice)
@@ -33,7 +33,8 @@ void asklogin()
 
         default:
         {
-            cout<<"Inalid Input\n";
+            system("cls");
+            cout<<"Invalid Input\n";
             asklogin();
             break;
         }
@@ -47,6 +48,7 @@ void admin_login()
     in>>temp_pass;
     while(true)
     {
+        system("cls");
         string password;
         cout<<"Enter password:\n";
         cin>>password;
@@ -66,6 +68,7 @@ void admin_login()
 
 void customer_login()
 {
+    system("cls");
     string username;
     cout<<"Enter username:\n";
     cin>>username;
@@ -78,6 +81,7 @@ void customer_login()
     {
         while(true)
         {
+            system("cls");
             string password;
             cout<<"Enter password:\n";
             cin>>password;
@@ -97,6 +101,7 @@ void customer_login()
     }
     else
     {
+        system("cls");
         cout<<"User doesn\'t exist\n";
         in.close();
         main();
@@ -105,12 +110,14 @@ void customer_login()
 
 void customer_register()
 {
+    system("cls");
     string username;
     cout<<"Enter username:\n";
     cin>>username;
     ifstream in("data/customer/"+username);
     string temp;
     in>>temp;
+    system("cls");
     if(username==temp)
     {
         cout<<"Username already taken.\n\n";

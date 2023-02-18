@@ -18,6 +18,7 @@ using namespace std;
 
 int main()
 {
+    system("cls");
     asklogin();
     if(is_login==true)
     {
