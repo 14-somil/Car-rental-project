@@ -1,11 +1,13 @@
 void add_car();
 void search_car();
 void available();
+void readd();
+int main();
 
 void admin()
 {
     system("cls");
-    cout<<"\nType:\n1: to add a new car\n2: to search a car\n3: to view available car\n\n";
+    cout<<"\nType:\n1: to add a new car\n2: to search a car\n3: to view available car\n4: to unbook a booked car\n5: to exit\n\n";
     int choice;
     cin>>choice;
     switch(choice)
@@ -28,6 +30,21 @@ void admin()
         {
             available();
             admin();
+            break;
+        }
+
+        case 4:
+        {
+            readd();
+            admin();
+            break;
+        }
+
+        case 5:
+        {
+            main();
+            is_admin=false;
+            is_login=false;
             break;
         }
 
@@ -131,4 +148,43 @@ void available()
         string temp;
         cin>>temp;
     }
+}
+
+void readd()
+{
+    system("cls");
+    ifstream copy("data/cars");
+    ofstream out("data/temp");
+    cout<<"Type username of user\n";
+    string username;
+    cin>>username;
+    string brand;
+    while(copy>>brand)
+    {
+        string model,data;
+        out<<brand<<'\t';
+        copy>>model;
+        out<<model<<'\t';
+        copy>>data;
+        if(data=="0")
+        {
+            out<<"1"<<'\t';
+            out<<"0";
+            copy>>data;
+        }
+        else
+        {
+            out<<data<<'\t';
+            copy>>data;
+            out<<data;
+        }
+        out<<endl;
+    }
+    copy.close();
+    out.close();
+    remove("data/cars");
+    rename("data/temp","data/cars");
+    cout<<"Done\nType anything to continue\n";
+    string temp;
+    cin>>temp;
 }

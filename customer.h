@@ -64,6 +64,7 @@ void customer()
         rename("data/temp","data/cars");
         cout<<"The car has been rented to "<<user<<endl;
         user="\0";
+        is_login=false;
         cout<<"Type anything to continue\n";
         string temp;
         cin>>temp;
