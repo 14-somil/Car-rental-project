@@ -84,7 +84,6 @@ void customer_login()
             
             if(password==temp_pass)
             {
-                cout<<"You are in\n";
                 break;
             }
             else

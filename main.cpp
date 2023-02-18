@@ -6,6 +6,7 @@ bool is_admin=false;
 #include <cstring>
 #include <fstream>
 #include <iomanip>
+#include <cstdlib>
 
 std::string user;
 
@@ -20,13 +21,13 @@ int main()
     asklogin();
     if(is_login==true)
     {
-        if(is_login==true)
+        if(is_admin==true)
         {
             admin();
         }
         else
         {
-            // customer();
+            customer();
         }
     }
     return 0;

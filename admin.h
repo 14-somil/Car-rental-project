@@ -74,12 +74,14 @@ void search_car()
                 in>>data;
                 if(data=="1")
                 {
-                    cout<<"Car is available";
+                    cout<<"Car is available\n";
                     break;
                 }
                 else
                 {
                     cout<<"Car is not available";
+                    in>>data;
+                    cout<<". Rented by \""<<data<<"\"\n";
                     break;
                 }
             }
