@@ -24,6 +24,7 @@ void customer()
         string temp;
         cin>>temp;
         in.close();
+        user="";
         main();
     }
     else
@@ -61,5 +62,11 @@ void customer()
         in.close();
         remove("data/cars");
         rename("data/temp","data/cars");
+        cout<<"The car has been rented to "<<user<<endl;
+        user="\0";
+        cout<<"Type anything to continue\n";
+        string temp;
+        cin>>temp;
+        main();
     }
 }
