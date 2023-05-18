@@ -1,3 +1,6 @@
+#include <windows.h>
+#include <unistd.h>
+
 int main();
 void customer_login();
 void customer_register();
@@ -5,7 +8,7 @@ void admin_login();
 
 void asklogin()
 {
-    cout<<"Enter\n1: to login as agent\n2: to login as customer\n3: to register as new customer\n\n";
+    cout<<"Enter\n1: to login as agent\n2: to login as customer\n3: to register as new customer\n4: to exit\n\n";
     int choice=0;
     cin>>choice;
     switch(choice)
@@ -28,6 +31,14 @@ void asklogin()
         case 3:
         {
             customer_register();
+            break;
+        }
+
+        case 4:
+        {
+            system("cls");
+            cout<<"Thank You";
+            sleep(2);
             break;
         }
 
